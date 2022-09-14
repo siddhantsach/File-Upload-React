@@ -9,7 +9,9 @@ import "react-fine-uploader/gallery/gallery.css";
 const uploader = new FineUploaderTraditional({
   options: {
     chunking: {
-      enabled: true
+      enabled: true,
+      partSize : 2048,
+      concurrent : true
     },
     request: {
       endpoint: "http://localhost:8080/files"
